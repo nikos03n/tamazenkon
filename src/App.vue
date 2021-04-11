@@ -1,32 +1,30 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <Menuq msg="Hello Vue 3 in CodeSandbox!" />
+    <router-view />
+  </v-app>
 </template>
+
+<script>
+import Menuq from './views/Menu.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Menuq
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Segoe UI Regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1020px;
 }
 </style>
