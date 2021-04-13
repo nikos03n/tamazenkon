@@ -6,16 +6,10 @@
         no-repeat fixed center;
     "
   >
-    <div>
-      <button type="button" class="btn btn-primary" v-on:click="myFunction()">
-        Подробней
-      </button>
-      <div id="myDIV">This is a DIV element.</div>
-    </div>
     <v-card>
       <v-toolbar
         flat
-        color="red lighten-2"
+        color="#1976d2"
         extended
         extension-height="50"
         dark
@@ -132,12 +126,17 @@
         </v-tab-item>
       </v-tabs>
     </v-card>
+    <vHoverOff />
   </div>
 </template>
 
 <script>
+import vHoverOff from "@/components/about/v-hover-off";
+
 export default {
   name: "About",
+  components: { vHoverOff },
+
   props: {
     msg: String,
   },

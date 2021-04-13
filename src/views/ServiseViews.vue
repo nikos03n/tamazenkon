@@ -12,12 +12,8 @@
             :key="i"
             :src="item.src"
           >
-            <div class="title">
-              <v-btn color="error" dark large @click="onClickHandler(i)">{{
-                item.title
-              }}</v-btn>
-            </div>
-          </v-carousel-item>+6
+          </v-carousel-item
+          >+6
         </div>
       </vCarousel>
     </div>

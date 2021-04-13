@@ -1,27 +1,19 @@
 <template>
-  <div class="container1" style="
-    padding-right: 0px;
-    padding-left: 0px;
-">
-    <ul id="navbar1" >
-      <li class="skill">
-        <router-link to="/"><span>T </span></router-link>
-      </li>
-    </ul>
-    <ul id="navbar1" >
+  <div class="container1" >
+    <ul id="navbar1">
       <li class="skill1">
-        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1>MINTO</span1></router-link>
+        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1>Tamazenko</span1></router-link>
       </li>
 
     </ul>
     <ul id="navbar" class="padin">
       <li class="home1"><router-link to="/">Home</router-link></li>
-      <li class="home2"><router-link to="/About">About Us</router-link></li>
+      <li class="home2"><router-link to="/About">About Me</router-link></li>
       <li class="home3"><router-link to="/Servise">Services</router-link></li>
       <li class="home4">
         <router-link style="padding-right: 0px"
         class="padin11"
-        to="/ConatctUs">Conatct Us</router-link>
+        to="/ConatctUs">Portfolio</router-link>
       </li>
     </ul>
   </div>

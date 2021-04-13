@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div id="example-1">
-      <button v-on:click="items += 1">Add 1</button>
-      <p>{{ items }}</p>
-    </div>
+    <vCarouselJava></vCarouselJava>
+
     <v-carousel
       hide-delimiters
       hide-delimiter-background
@@ -12,35 +10,10 @@
     >
       <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
         <div class="title">
-          <v-btn color="error" dark large @click="onClickHandler(i)">{{
+          <v-btn1 color="#1976d2" dark large @click="onClickHandler(i)">{{
             item.title
-          }}</v-btn>
+          }}</v-btn1>
         </div>
-        <div class="v-window__prev">
-          <v-btn
-            type="button"
-            class="v-btn v-btn--icon v-btn--round theme--dark v-size--default"
-            aria-label="Previous visual"
-          >
-            <span class="v-btn__content"
-              ><i
-                aria-hidden="true"
-                class="v-icon notranslate mdi mdi-chevron-left theme--dark"
-                style="font-size: 36px"
-              ></i
-            ></span>
-          </v-btn>
-        </div>
-
-        <v-container fill-height fluid pa-0 ma-0 pb-10>
-          <v-layout fill-height align-end pb-4 mb-8>
-            <v-flex xs12>
-              <v-card color="red" class="pa-2">
-                <span class="headline white--text" v-text="item.src"> </span>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
 
         <div class="title12">
           <v-card-text
@@ -52,7 +25,7 @@
             color="error"
             dark
             large
-            >{{ item.title }}Minto</v-card-text
+            >Minto</v-card-text
           >
         </div>
         <div class="title22">
@@ -65,8 +38,7 @@
             color="error"
             dark
             large
-            >{{ item.title }}A minimal Web Design from
-            cssauthor.com</v-card-text
+            >A minimal Web Design from cssauthor.com</v-card-text
           >
         </div>
       </v-carousel-item>
@@ -86,14 +58,19 @@
 </template>
 
 <script>
+import vCarouselJava from "@/components/v-carousel-java.vue";
 export default {
+  name: "SectionText",
+  components: {
+    vCarouselJava,
+  },
   data() {
     return {
       items: [
         {
           src:
             "https://firebasestorage.googleapis.com/v0/b/mayport-268e8.appspot.com/o/ads%2FLayer%2024.png?alt=media&token=2b2712dd-e811-4230-8e7d-94ae64f68fe4",
-            title: "Rack Section",
+          title: "Rack Section",
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
