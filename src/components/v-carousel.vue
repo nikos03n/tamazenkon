@@ -17,7 +17,6 @@
                 :width="slideWidth"
               >
                 <p>{{ item.img }}</p>
-                <p>{{ item.name }}</p>
                 <p>{{ item.id }}</p>
               </v-carousel-item>
             </div>

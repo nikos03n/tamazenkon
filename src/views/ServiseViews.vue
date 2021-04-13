@@ -6,17 +6,19 @@
         :slideWidth="500"
         :interval="2000"
       >
-  <div class="caro">
-      <v-carousel-item v-for="(item, i) in sliderItems" :key="i" :src="item.src">
-        <div class="title">
-          <v-btn color="error" dark large @click="onClickHandler(i)">{{
-            item.title
-          }}</v-btn>
+        <div class="caro">
+          <v-carousel-item
+            v-for="(item, i) in sliderItems"
+            :key="i"
+            :src="item.src"
+          >
+            <div class="title">
+              <v-btn color="error" dark large @click="onClickHandler(i)">{{
+                item.title
+              }}</v-btn>
+            </div>
+          </v-carousel-item>+6
         </div>
-      </v-carousel-item>
-
-  </div>
-
       </vCarousel>
     </div>
   </div>
