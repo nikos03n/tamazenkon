@@ -2,14 +2,14 @@
   <div class="container1" >
     <ul id="navbar1">
       <li class="skill1">
-        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1>Tamazenko</span1></router-link>
+        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1>Tamazenko </span1></router-link>
       </li>
 
     </ul>
     <ul id="navbar" class="padin">
       <li class="home1"><router-link to="/">Home</router-link></li>
       <li class="home2"><router-link to="/About">About Me</router-link></li>
-      <li class="home3"><router-link to="/Servise">Services</router-link></li>
+      <!-- <li class="home3"><router-link to="/Servise">Services</router-link></li> -->
       <li class="home4">
         <router-link style="padding-right: 0px"
         class="padin11"
@@ -86,8 +86,8 @@ span1 {
 .container1 {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .home1 {

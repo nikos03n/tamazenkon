@@ -13,7 +13,7 @@
             :src="item.src"
           >
           </v-carousel-item
-          >+6
+          >
         </div>
       </vCarousel>
     </div>

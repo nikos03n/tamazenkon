@@ -1,17 +1,17 @@
 <template>
   <div class="Menu">
-  <CoreAppBar msg="Welcome to Your Vue.js App"/>
+    <CoreAppBar />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CoreAppBar from '@/components/core/AppBar.vue'
+import CoreAppBar from "@/components/core/AppBar.vue";
 
 export default {
-  name: 'Menu',
+  name: "Menu",
   components: {
-    CoreAppBar
-  }
-}
+    CoreAppBar,
+  },
+};
 </script>

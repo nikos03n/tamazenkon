@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Menuq msg="Hello Vue 3 in CodeSandbox!" />
+    <Menuq />
     <router-view />
   </v-app>
 </template>

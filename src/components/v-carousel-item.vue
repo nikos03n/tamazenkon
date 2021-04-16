@@ -8,9 +8,16 @@
           :src="require('../images/' + item_data.img)"
           alt=""
           v-if="imageSlide"
-          
+          :carousel_data="items"
         />
-        
+        <v-card2>
+          <v-btn style="right: 200px" text @click="prevSlide">
+            prevSlide
+          </v-btn>
+
+          <v-btn text @click="nextSlide"> nextSlide </v-btn>
+        </v-card2>
+
         <!-- <v-container fill-height fluid pa-0 ma-0 pb-8
           ><img
             :src="require('../images/' + item_data.img)"
@@ -48,6 +55,10 @@ export default {
       type: Object,
       default: () => [],
     },
+    carousel_data: {
+      type: Array,
+      default: () => [],
+    },
     imageSlide: {
       type: Boolean,
       default: true,
@@ -83,6 +94,21 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    prevSlide() {
+      if (this.currentSlideIndex > 0) {
+        this.currentSlideIndex--;
+      }
+    },
+    nextSlide() {
+      if (this.currentSlideIndex >= this.carousel_data.length - 1) {
+        this.currentSlideIndex = 0;
+      } else {
+        this.currentSlideIndex++;
+        console.log(this.currentSlideIndex);
+      }
+    },
   },
   computed: {},
 };
