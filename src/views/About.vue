@@ -3,7 +3,7 @@
     <v-card>
       <v-toolbar
         flat
-        color="#1976d2"
+        color="rgb(117 117 117)"
         extended
         extension-height="50"
         dark
@@ -52,6 +52,12 @@
                   юридичних осіб (Державна податкова інспекція), фахівець
                   (Управління сільського господарства
                   облдержадміністрація).</v-timeline-item
+                >
+                <v-timeline-item class="text-centre"
+                  >з 1998 - Сільське господарство. Виконував обов'язки бригадира в агородней бригаді. Вирощували помідори, огірки, цибуля та ін. Овочі.</v-timeline-item
+                >
+                <v-timeline-item class="text-centre"
+                  >з 1987 - Середня школа, музична школа (баян, болалайка, гітара, шахи), Інститут</v-timeline-item
                 >
               </v-timeline>
             </v-card-text>

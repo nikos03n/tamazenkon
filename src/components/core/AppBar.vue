@@ -2,7 +2,7 @@
   <div class="container1" >
     <ul id="navbar1">
       <li class="skill1">
-        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1>Tamazenko </span1></router-link>
+        <router-link style="margin-top: 5px; padding-left: 0px; margin-right: 20px;" to="/"><span1> </span1></router-link>
       </li>
 
     </ul>
