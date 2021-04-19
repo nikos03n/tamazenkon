@@ -1,205 +1,116 @@
-// Styles
-import './VBtn.sass'
+<template>
+  <v-app>
+    <div>
+      <v-navigation-drawer app temporary v-model="drawer">
+        <v-list-item v-for="link of links" :key="link.title" :to="link.url">
+          <v-list-item-icon>
+            <v-icon>{{link.icon}}</v-icon>
+          </v-list-item-icon>
 
-// Extensions
-import VSheet from '../VSheet'
+          <v-list-item-content>
+            <v-list-item-title v-text="link.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
 
-// Components
-import VProgressCircular from '../VProgressCircular'
+        <v-list-item v-if="isUserLoggedIn" @click="onLogout">
+          <v-list-item-action>
+            <v-icon>exit_to_app</v-icon>
+          </v-list-item-action>
 
-// Mixins
-import { factory as GroupableFactory } from '../../mixins/groupable'
-import { factory as ToggleableFactory } from '../../mixins/toggleable'
-import Elevatable from '../../mixins/elevatable'
-import Positionable from '../../mixins/positionable'
-import Routable from '../../mixins/routable'
-import Sizeable from '../../mixins/sizeable'
+          <v-list-item-content>
+            <v-list-item-title v-text="'Logout'"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-navigation-drawer>
 
-// Utilities
-import mixins, { ExtractVue } from '../../util/mixins'
-import { breaking } from '../../util/console'
+      <v-toolbar dark color="primary">
+        <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
+        <v-toolbar-title>
+          <router-link to="/" tag="span" class="pointer">Ad application</router-link>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
 
-// Types
-import { VNode } from 'vue'
-import { PropValidator, PropType } from 'vue/types/options'
-import { RippleOptions } from '../../directives/ripple'
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn
+            v-for="link in links"
+            :key="link.title"
+            :to="link.url"
+            depressed
+            large
+            color="primary"
+          >
+            <v-icon left>{{link.icon}}</v-icon>
+            {{link.title}}
+          </v-btn>
+          <v-btn @click="onLogout" v-if="isUserLoggedIn" color="primary" depressed>
+            <v-icon left>exit_to_app</v-icon>Logout
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
 
-const baseMixins = mixins(
-  VSheet,
-  Routable,
-  Positionable,
-  Sizeable,
-  GroupableFactory('btnToggle'),
-  ToggleableFactory('inputValue')
-  /* @vue/component */
-)
-interface options extends ExtractVue<typeof baseMixins> {
-  $el: HTMLElement
-}
+      <v-container>
+        <router-view></router-view>
+      </v-container>
 
-export default baseMixins.extend<options>().extend({
-  name: 'v-btn',
+      <template v-if="error">
+        <v-snackbar
+          :timeout="5000"
+          :multi-line="true"
+          color="error"
+          @input="closeError"
+          :value="true"
+        >
+          {{error}}
+          <v-spacer></v-spacer>
+          <v-btn dark @click.native="closeError">Close</v-btn>
+        </v-snackbar>
+      </template>
+    </div>
+  </v-app>
+</template>
 
-  props: {
-    activeClass: {
-      type: String,
-      default (): string | undefined {
-        if (!this.btnToggle) return ''
-
-        return this.btnToggle.activeClass
-      },
-    } as any as PropValidator<string>,
-    block: Boolean,
-    depressed: Boolean,
-    fab: Boolean,
-    icon: Boolean,
-    loading: Boolean,
-    outlined: Boolean,
-    plain: Boolean,
-    retainFocusOnClick: Boolean,
-    rounded: Boolean,
-    tag: {
-      type: String,
-      default: 'button',
-    },
-    text: Boolean,
-    tile: Boolean,
-    type: {
-      type: String,
-      default: 'button',
-    },
-    value: null as any as PropType<any>,
+<script>
+export default {
+  data() {
+    return {
+      drawer: false,
+    };
   },
-
-  data: () => ({
-    proxyClass: 'v-btn--active',
-  }),
-
   computed: {
-    classes (): any {
-      return {
-        'v-btn': true,
-        ...Routable.options.computed.classes.call(this),
-        'v-btn--absolute': this.absolute,
-        'v-btn--block': this.block,
-        'v-btn--bottom': this.bottom,
-        'v-btn--disabled': this.disabled,
-        'v-btn--is-elevated': this.isElevated,
-        'v-btn--fab': this.fab,
-        'v-btn--fixed': this.fixed,
-        'v-btn--has-bg': this.hasBg,
-        'v-btn--icon': this.icon,
-        'v-btn--left': this.left,
-        'v-btn--loading': this.loading,
-        'v-btn--outlined': this.outlined,
-        'v-btn--plain': this.plain,
-        'v-btn--right': this.right,
-        'v-btn--round': this.isRound,
-        'v-btn--rounded': this.rounded,
-        'v-btn--router': this.to,
-        'v-btn--text': this.text,
-        'v-btn--tile': this.tile,
-        'v-btn--top': this.top,
-        ...this.themeClasses,
-        ...this.groupClasses,
-        ...this.elevationClasses,
-        ...this.sizeableClasses,
+    error() {
+      return this.$store.getters.error;
+    },
+    isUserLoggedIn() {
+      return this.$store.getters.isUserLoggedIn;
+    },
+    links() {
+      if (this.isUserLoggedIn) {
+        return [
+          { title: "Orders", icon: "bookmark_border", url: "/orders" },
+          { title: "New ad", icon: "note_add", url: "/new" },
+          { title: "My ads", icon: "list", url: "/list" },
+        ];
       }
-    },
-    computedElevation (): string | number | undefined {
-      if (this.disabled) return undefined
-
-      return Elevatable.options.computed.computedElevation.call(this)
-    },
-    computedRipple (): RippleOptions | boolean {
-      const defaultRipple = this.icon || this.fab ? { circle: true } : true
-      if (this.disabled) return false
-      else return this.ripple ?? defaultRipple
-    },
-    hasBg (): boolean {
-      return !this.text && !this.plain && !this.outlined && !this.icon
-    },
-    isElevated (): boolean {
-      return Boolean(
-        !this.icon &&
-        !this.text &&
-        !this.outlined &&
-        !this.depressed &&
-        !this.disabled &&
-        !this.plain &&
-        (this.elevation == null || Number(this.elevation) > 0)
-      )
-    },
-    isRound (): boolean {
-      return Boolean(
-        this.icon ||
-        this.fab
-      )
-    },
-    styles (): object {
-      return {
-        ...this.measurableStyles,
-      }
+      return [
+        { title: "Login", icon: "lock", url: "/login" },
+        { title: "Registration", icon: "face", url: "/registration" },
+      ];
     },
   },
-
-  created () {
-    const breakingProps = [
-      ['flat', 'text'],
-      ['outline', 'outlined'],
-      ['round', 'rounded'],
-    ]
-
-    /* istanbul ignore next */
-    breakingProps.forEach(([original, replacement]) => {
-      if (this.$attrs.hasOwnProperty(original)) breaking(original, replacement, this)
-    })
-  },
-
   methods: {
-    click (e: MouseEvent): void {
-      // TODO: Remove this in v3
-      !this.retainFocusOnClick && !this.fab && e.detail && this.$el.blur()
-      this.$emit('click', e)
-
-      this.btnToggle && this.toggle()
+    closeError() {
+      this.$store.dispatch("clearError");
     },
-    genContent (): VNode {
-      return this.$createElement('span', {
-        staticClass: 'v-btn__content',
-      }, this.$slots.default)
-    },
-    genLoader (): VNode {
-      return this.$createElement('span', {
-        class: 'v-btn__loader',
-      }, this.$slots.loader || [this.$createElement(VProgressCircular, {
-        props: {
-          indeterminate: true,
-          size: 23,
-          width: 2,
-        },
-      })])
+    onLogout() {
+      this.$store.dispatch("logoutUser");
+      this.$router.push("/");
     },
   },
+};
+</script>
 
-  render (h): VNode {
-    const children = [
-      this.genContent(),
-      this.loading && this.genLoader(),
-    ]
-    const { tag, data } = this.generateRouteLink()
-    const setColor = this.hasBg
-      ? this.setBackgroundColor
-      : this.setTextColor
-
-    if (tag === 'button') {
-      data.attrs!.type = this.type
-      data.attrs!.disabled = this.disabled
-    }
-    data.attrs!.value = ['string', 'number'].includes(typeof this.value)
-      ? this.value
-      : JSON.stringify(this.value)
-
-    return h(tag, this.disabled ? data : setColor(this.color, data), children)
-  },
-})
+<style scoped>
+.pointer {
+  cursor: pointer;
+}
+</style>

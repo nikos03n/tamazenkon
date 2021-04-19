@@ -3,7 +3,7 @@
     <v-card>
       <v-toolbar
         flat
-        color="rgb(117 117 117)"
+        color="#050505"
         extended
         extension-height="50"
         dark
@@ -11,7 +11,7 @@
       >
         <div>
           <v-toolbar style="width: 700px; height: 0px"
-            >Тамазенко Микола Васильович <br />
+            ><v-spacer></v-spacer>Тамазенко Микола Васильович <br />
             (066)-725-62-51 nik.tam03@icloud.com</v-toolbar
           >
         </div>
@@ -54,10 +54,13 @@
                   облдержадміністрація).</v-timeline-item
                 >
                 <v-timeline-item class="text-centre"
-                  >з 1998 - Сільське господарство. Виконував обов'язки бригадира в агородней бригаді. Вирощували помідори, огірки, цибуля та ін. Овочі.</v-timeline-item
+                  >з 1998 - Сільське господарство. Виконував обов'язки бригадира
+                  в агородней бригаді. Вирощували помідори, огірки, цибуля та
+                  ін. Овочі.</v-timeline-item
                 >
                 <v-timeline-item class="text-centre"
-                  >з 1987 - Середня школа, музична школа (баян, болалайка, гітара, шахи), Інститут</v-timeline-item
+                  >з 1987 - Середня школа, музична школа (баян, болалайка,
+                  гітара, шахи), Інститут</v-timeline-item
                 >
               </v-timeline>
             </v-card-text>
@@ -142,7 +145,7 @@ export default {
 .sliding-background {
   background: url("https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2Fice_screenshot_20210415-192406.png?alt=media&token=559b230d-dedb-4ba8-9193-16710d0b4f7c")
     repeat-x fixed;
-  height: 300px;
+  height: 0px;
   width: 5076px;
   animation: slide 60s linear infinite;
 }
