@@ -2,7 +2,7 @@
 <template>
   <div>
     <div>
-      <div >
+      <div>
         <v-btn
           hide-on-scroll
           absolute:true
@@ -58,7 +58,10 @@
             <v-layout perehid>
               <v-flex xs12 sm12 offset-sm0>
                 <v-card style="box-shadow: inherit">
-                  <v-card-title primary-title style="text-align: centre">
+                  <v-card-title
+                    primary-title
+                    style="text-align: centre; margin-top: 10px"
+                  >
                     <div>
                       <h3
                         class="headline mb-1 ont-weight-black"

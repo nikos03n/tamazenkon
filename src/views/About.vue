@@ -1,21 +1,22 @@
 <template>
-  <div>
-    <v-card>
-      <v-toolbar
-        flat
-        color="#050505"
-        extended
-        extension-height="50"
-        dark
-        overflow-hidden
-      >
-        <div>
-          <v-toolbar style="width: 700px; height: 0px"
-            ><v-spacer></v-spacer>Тамазенко Микола Васильович <br />
-            (066)-725-62-51 nik.tam03@icloud.com</v-toolbar
-          >
-        </div>
-      </v-toolbar>
+  <div max-width="1020">
+    <v-card
+      class="mx-auto home3"
+      max-width="1020"
+      tile
+      class0="v-timeline-item__inner-dot"
+    >
+      <div>
+        <v-card-text>
+          <div>
+            <div>
+              <div class="home1"></div>
+              Тамазенко Микола Васильович <br />
+              (066)-725-62-51 nik.tam03@icloud.com
+            </div>
+          </div>
+        </v-card-text>
+      </div>
       <v-tabs grow>
         <v-tab>
           <v-icon left> mdi-account </v-icon>
@@ -31,37 +32,122 @@
         </v-tab>
 
         <v-tab-item>
-          <v-card flat>
+          <v-card flat elevation="8">
             <v-card-text>
               <v-timeline>
-                <v-timeline-item class="text-centre"
-                  >з 2015 - оператор автоматичних ліній (біометричні паспорти та
-                  і ін ) Поліграфкомбінат Україна.<vShowMoreDetailsCopy />
+                <v-timeline-item
+                  v-for="(year, i) in years"
+                  :key="i"
+                  :color="year.color"
+                  small
+                  id="1"
+                  class="text-centre py-4"
+                >
+                  <template v-slot:opposite>
+                    <span
+                      :class="`headline font-weight-bold ${year.color}--text`"
+                      v-text="year.year"
+                    ></span>
+                  </template>
+                  <h2
+                    :class="`headline font-weight-light mb-4 ${year.color}--text`"
+                  >
+                    Виробництво
+                  </h2>
+                  Оператор автоматичних ліній (біометричні паспорти та і ін )
+                  Поліграфкомбінат Україна.<vShowMoreDetailsCopy />
                 </v-timeline-item>
-                <v-timeline-item class="text-centre">
-                  з 2011 - Торгівля. Менеджер відділу збуту на заводі (основна
-                  група товарів вироби з дроту, сітка зварена і ін.),
+                <v-timeline-item
+                  v-for="(year, i) in years1"
+                  :key="i"
+                  :color="year.color"
+                  small
+                  class="text-centre py-4"
+                >
+                  <template v-slot:opposite>
+                    <span
+                      :class="`headline font-weight-bold ${year.color}--text`"
+                      v-text="year.year"
+                    ></span>
+                  </template>
+                  <h2
+                    :class="`headline font-weight-light mb-4 ${year.color}--text`"
+                  >
+                    Торгівля
+                  </h2>
+                  Менеджер відділу збуту на заводі ПП "Промисловий альянс 2012"
+                  (основна група товарів вироби з дроту, сітка зварена і ін.),
                   Регіональний менеджер непродовольчих товарів (основна група
                   товарів пластикові ємності, будівельні матеріали, фільтра під
                   воду і ін.).<vShowMoreDetails />
                 </v-timeline-item>
-                <v-timeline-item class="text-centre"
-                  >з 2006 - Держ. Службовець. Спеціаліст по виплаті (Управління
-                  праці та соціального захисту населення), старший державний
-                  податковий ревізор- інспектор відділу податкового контролю
-                  юридичних осіб (Державна податкова інспекція), фахівець
-                  (Управління сільського господарства
-                  облдержадміністрація).</v-timeline-item
+                <v-timeline-item
+                  v-for="(year, i) in years2"
+                  :key="i"
+                  :color="year.color"
+                  small
+                  class="text-centre py-4"
                 >
-                <v-timeline-item class="text-centre"
-                  >з 1998 - Сільське господарство. Виконував обов'язки бригадира
-                  в агородней бригаді. Вирощували помідори, огірки, цибуля та
-                  ін. Овочі.</v-timeline-item
+                  <template v-slot:opposite>
+                    <span
+                      :class="`headline font-weight-bold ${year.color}--text`"
+                      v-text="year.year"
+                    ></span>
+                  </template>
+                  <h2
+                    :class="`headline font-weight-light mb-4 ${year.color}--text`"
+                  >
+                    Державна служба
+                  </h2>
+                  Cтарший державний податковий ревізор- інспектор відділу
+                  податкового контролю юридичних осіб (Державна податкова
+                  інспекція), фахівець (Управління сільського господарства
+                  облдержадміністрація), cпеціаліст по виплаті (Управління праці
+                  та соціального захисту населення) .
+                </v-timeline-item>
+                <v-timeline-item
+                  v-for="(year, i) in years3"
+                  :key="i"
+                  :color="year.color"
+                  small
+                  class="text-centre py-4"
                 >
-                <v-timeline-item class="text-centre"
-                  >з 1987 - Середня школа, музична школа (баян, болалайка,
-                  гітара, шахи), Інститут</v-timeline-item
+                  <template v-slot:opposite>
+                    <span
+                      :class="`headline font-weight-bold ${year.color}--text`"
+                      v-text="year.year"
+                    ></span>
+                  </template>
+                  <h2
+                    :class="`headline font-weight-light mb-4 ${year.color}--text`"
+                  >
+                    Сільське господарство
+                  </h2>
+                  Виконував обов'язки бригадира в агородней бригаді. Вирощували
+                  помідори, огірки, цибуля та ін. овочі.
+                </v-timeline-item>
+                <!-- <v-timeline-item
+                  v-for="(year, i) in years4"
+                  :key="i"
+                  :color="year.color"
+                  small
+                  id="2"
+                  class="text-centre py-4"
                 >
+                  <template v-slot:opposite>
+                    <span
+                      :class="`headline font-weight-bold ${year.color}--text`"
+                      v-text="year.year"
+                    ></span>
+                  </template>
+                  <h2
+                    :class="`headline font-weight-light mb-4 ${year.color}--text`"
+                  >
+                    Освiта
+                  </h2>
+                  Середня школа, музична школа (баян, болалайка,
+                  гітара, шахи), Інститут
+                </v-timeline-item> -->
               </v-timeline>
             </v-card-text>
           </v-card>
@@ -106,13 +192,6 @@
       </v-tabs>
     </v-card>
     <vHoverOff />
-    <div class="wrapper">
-      <div class="sliding-background">
-        <div>
-          <v-toolbar></v-toolbar>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -130,6 +209,41 @@ export default {
   },
   data: () => ({
     return: {},
+    years: [
+      {
+        id: "100px",
+        color: "cyan",
+        year: "з 2015",
+      },
+    ],
+    years1: [
+      {
+        id: 2,
+        color: "green",
+        year: "з 2011 ",
+      },
+    ],
+    years2: [
+      {
+        id: 3,
+        color: "pink",
+        year: "з 2006 ",
+      },
+    ],
+    years3: [
+      {
+        id: 4,
+        color: "orange",
+        year: "з 1998  ",
+      },
+    ],
+    years4: [
+      {
+        id: 5,
+        color: "amber",
+        year: "з 1987 ",
+      },
+    ],
   }),
   computed: {},
   methods: {},
@@ -150,11 +264,47 @@ export default {
   animation: slide 60s linear infinite;
 }
 
-.v-toolbar__extension[data-v-039c5b43] {
-  align-items: center;
-  display: flex;
-  position: relative;
-  z-index: 0;
-  justify-content: center;
+.home1 {
+  background: url("https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6")
+    no-repeat;
+  background-size: 150px;
+  padding-bottom: 150px;
+  background-position: 50%;
+  border-radius: 50%;
 }
+.home3 {
+  background-color: rgb(229, 238, 238);
+}
+.home2 {
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid rgb(57, 196, 196);
+  border: 200px;
+  border-top: 300px;
+  background-size: 300px;
+  padding-bottom: 250px;
+  height: 200px;
+}
+/* .theme--light.v-timeline::before {
+  background-color: rgba(19, 54, 170, 0.5);
+}
+.v-timeline-item__inner-dot.primary {
+  background-color: rgba(0, 0, 0, 0.486) !important;
+  color: violet !important;
+  background: green !important;
+}
+.v-application .primary {
+  background-color: black !important;
+  color: violet !important;
+  background: green !important;
+  background-color: #060607 !important;
+  border-color: #191b1d !important;
+}
+v-timeline-item text-centre theme--light {
+  background-color: black !important;
+  color: violet !important;
+  background: green !important;
+  background-color: #060607 !important;
+  border-color: #191b1d !important;
+} */
 </style>

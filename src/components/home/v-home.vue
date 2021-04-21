@@ -8,7 +8,6 @@
       <dir>
         <v-img
           style="
-            border-radius: 50%;
             display: block;
             width: 200px;
             height: 200px;

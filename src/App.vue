@@ -25,6 +25,6 @@ export default {
   color: #2c3e50;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1020px;
+  //max-width: 1020px;
 }
 </style>

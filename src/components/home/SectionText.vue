@@ -42,7 +42,7 @@ export default {
 }
 
 span {
-  color: #82699d;
+  color: #91143d;
 }
 
 hr {
