@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import vCarouselItemButton from "./v-carousel-item-button.vue";
+import vCarouselItemButton from "./servises/v-carousel-item-button.vue";
 
 export default {
   name: "v-carousel-item",

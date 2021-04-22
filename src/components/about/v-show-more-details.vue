@@ -5,48 +5,6 @@
       <div id="demo" class="text-centre">
         <v-btn
           hide-on-scroll
-          absolute:true
-          append:true
-          block:true
-          bottom:true
-          color:undefined
-          dark:null
-          depressed:true
-          disabled:true
-          elevation:true
-          exact:true
-          exactActiveClass:true
-          fab:true
-          fixed:true
-          height:true
-          href:true
-          icon:false
-          input-Value:true
-          large:true
-          left:false
-          light:true
-          link:false
-          loading:false
-          maxHeight:undefined
-          maxWidth:undefined
-          minHeight:undefined
-          minWidth:undefined
-          outlined:false
-          plain:false
-          replace:false
-          retainFocusOnClick:false
-          right:false
-          ripple:null
-          rounded:false
-          shaped:false
-          small:false
-          target:undefined
-          text:false
-          tile:false
-          to:undefined
-          top:false
-          value:undefined
-          width:undefined
           xLarge:false
           xSmall
           style="cursor: pointer"
@@ -63,13 +21,13 @@
                     style="text-align: centre; margin-top: 10px"
                   >
                     <div>
-                      <h3
+                      <h2
                         class="headline mb-1 ont-weight-black"
                         style="font-weight: 700"
                       >
                         Резюме
-                      </h3>
-                      <div
+                      </h2>
+                      <h4
                         style="
                           font-size: 12px;
                           line-height: 1rem;
@@ -77,7 +35,7 @@
                         "
                       >
                         {{ card_text }}
-                      </div>
+                      </h4>
                     </div>
                   </v-card-title>
                   <v-card-actions style="float: right"> </v-card-actions>

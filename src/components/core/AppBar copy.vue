@@ -1,5 +1,5 @@
 <template>
-  <v-list id="w1020" class="d-flex align-end flex-column">
+  <v-list class="d-flex align-end flex-column">
     <ul id="navbar112">
       <li class="skill12">
         <router-link to="/"><span1> </span1></router-link>

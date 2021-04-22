@@ -21,12 +21,10 @@
 </template>
 
 <script>
-import vCarousel from "@/components/v-carousel.vue";
 
 export default {
   name: "ServiseViews",
   components: {
-    vCarousel,
   },
   props: ["showRackSec", "showSubrackSec", "showParts", "showDatabase"],
 

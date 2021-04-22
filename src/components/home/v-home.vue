@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-layout perehid>
-      <div
+    <v-layout perehid style="rezwiethd">
+      <!-- <div
         class="cover"
         style="background-image: url(path/to/user/image.jpg)"
-      ></div>
+      ></div> -->
       <dir>
         <v-img
           style="
@@ -13,7 +13,7 @@
             height: 200px;
             border-radius: 50%;
             overflow: hidden;
-            center
+            margin-inline: auto;
           "
           src="https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6"
           aspect-ratio="1.2"
@@ -21,32 +21,35 @@
       </dir>
 
       <v-flex xs8 sm8 offset-sm0>
-        <v-card style="box-shadow: inherit">
-          <v-card-title primary-title style="text-align: left">
-            <div>
-              <h3
-                class="headline mb-1 ont-weight-black"
-                style="font-weight: 700"
-              >
-                Резюме
-              </h3>
-              <div style="font-family: Segoe UI Italic">{{ card_text }}</div>
-            </div>
-          </v-card-title>
-          <v-card-actions style="float: right"> </v-card-actions>
+        <v-hover >
+          <template v-slot:default="{ hover }">
+            <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-3">
+              <v-card style="box-shadow: inherit">
+                <v-card-title primary-title style="text-align: left">
+                  <div>
+                    <h3
+                      class="headline mb-1 ont-weight-black"
+                      style="font-weight: 700"
+                    >
+                      Резюме
+                    </h3>
 
-          <v-btn to="/About">
-            <span>Детальніше</span>
-          </v-btn>
-        </v-card>
+                    <div style="font-family: Segoe UI Italic">
+                      {{ card_text }}
+                    </div>
+                  </div>
+                </v-card-title>
+                <v-card-actions style="float: right"> </v-card-actions>
+
+                <v-btn to="/About">
+                  <span>Детальніше</span>
+                </v-btn>
+              </v-card>
+            </v-card>
+          </template>
+        </v-hover>
       </v-flex>
     </v-layout>
-
-    <!-- <v-card style="box-shadow: inherit; margin-bottom: 10px">
-      <v-text-no-wrap class11="text-sm-left" style="font-size: 23px"
-        ><spane style="color: #000000" ></spane> Детальніше</v-text-no-wrap
-      >
-    </v-card> -->
   </div>
 </template>
 <script>
@@ -64,6 +67,11 @@ export default {
 .qwer {
   background-color: #f5f5f5;
 }
+.rezwiethd{
+  bottom: 50px;
+}
+
+
 
 /*Responsive*/
 

@@ -63,13 +63,13 @@
                     style="text-align: centre; margin-top: 10px"
                   >
                     <div>
-                      <h3
+                      <h2
                         class="headline mb-1 ont-weight-black"
                         style="font-weight: 700"
                       >
                         Резюме
-                      </h3>
-                      <div
+                      </h2>
+                      <h4
                         style="
                           font-size: 12px;
                           line-height: 1rem;
@@ -77,7 +77,7 @@
                         "
                       >
                         {{ card_text }}
-                      </div>
+                      </h4>
                     </div>
                   </v-card-title>
                   <v-card-actions style="float: right"> </v-card-actions>

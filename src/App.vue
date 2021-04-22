@@ -1,17 +1,14 @@
 <template>
   <v-app>
-    <Menuq />
     <router-view />
   </v-app>
 </template>
 
 <script>
-import Menuq from './views/Menu.vue'
 
 export default {
   name: 'app',
   components: {
-    Menuq
   }
 }
 </script>

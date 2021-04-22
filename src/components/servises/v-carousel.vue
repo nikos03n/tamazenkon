@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import vCarouselJava from "./v-carousel-java.vue";
-import vCarouselItem from "./v-carousel-item";
+import vCarouselJava from "./servises/v-carousel-java.vue";
+import vCarouselItem from "./servises/v-carousel-item";
 
 export default {
   name: "v-carousel",

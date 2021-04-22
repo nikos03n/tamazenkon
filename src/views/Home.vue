@@ -1,12 +1,17 @@
 <template>
   <div>
+    <div class="mx-auto" max-width="1000" tile>
+      <CoreAppBar class="mx-auto" max-width="1000" tile></CoreAppBar>
+    </div>
+
+    <vHedr> </vHedr>
+
     <div class="mx-auto" max-width="1500" tile>
       <v-img
         height="100%"
         src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
       >
-        <div >
-          <vHedr> </vHedr>
+        <div>
           <vHome />
           <SectionText />
           <div class="1sliding-background"></div>
@@ -38,6 +43,8 @@
 
 <script>
 // @ is an alias to /src
+import CoreAppBar from "@/components/core/AppBar copy.vue";
+
 import vHedr from "@/components/home/v-heder.vue";
 import vHome from "@/components/home/v-home.vue";
 import SectionText from "@/components/home/SectionText.vue";
@@ -45,6 +52,7 @@ import SectionText from "@/components/home/SectionText.vue";
 export default {
   name: "Home",
   components: {
+    CoreAppBar,
     vHedr,
     vHome,
     SectionText,

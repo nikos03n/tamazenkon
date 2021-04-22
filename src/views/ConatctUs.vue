@@ -1,5 +1,6 @@
 <template>
   <div>
+    <CoreAppBar />
     <conatct />
     <timeline />
   </div>
@@ -8,12 +9,14 @@
 <script>
 import conatct from "@/components/conatctUs/Conatct.vue";
 import timeline from "@/components/conatctUs/Timeline.vue";
+import CoreAppBar from "@/components/core/AppBar copy.vue";
 
 export default {
   name: "rezume",
   components: {
     conatct,
     timeline,
+    CoreAppBar,
   },
 };
 </script>
