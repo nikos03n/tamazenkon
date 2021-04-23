@@ -9,7 +9,7 @@
         times
       </v-banner>
       <v-toolbar light>
-        <v-toolbar-title>Здесь будут мои новые проекты</v-toolbar-title>
+        <v-toolbar-title>Здесь будут портфолио моих новых проектов</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items
           v-for="item in items"

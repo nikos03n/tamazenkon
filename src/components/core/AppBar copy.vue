@@ -1,14 +1,13 @@
 <template>
-  <v-list class="d-flex align-end flex-column">
-    <ul id="navbar112">
-      <li class="skill12">
+  <v-list id="11w1020" class="d-flex align-end flex-column">
+    <ul >
+      <li >
         <router-link to="/"><span1> </span1></router-link>
       </li>
     </ul>
     <ul id="navbar" class="padin">
       <li class="home1"><router-link to="/">Home</router-link></li>
       <li class="home2"><router-link to="/About">About Me</router-link></li>
-      <!-- <li class="home3"><router-link to="/Servise">Services</router-link></li> -->
       <li class="home4">
         <router-link to="/ConatctUs">Portfolio</router-link>
       </li>
@@ -101,7 +100,7 @@ li {
 @media screen and (max-width: 992px) {
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 436px) {
   .padin {
     font-size: 13px;
   }
@@ -129,7 +128,7 @@ li {
     padding-top: 2px;
     padding-bottom: 10px;
   }
-}
+} 
 /* 320px - 576px */
 @media screen and (max-width: 375px) {
   .padin {
@@ -160,7 +159,7 @@ li {
     padding-bottom: 10px;
   }
 }
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   .padin {
     font-size: 13px;
   }
@@ -188,10 +187,39 @@ li {
     padding-top: 2px;
     padding-bottom: 10px;
   }
-}
-@media screen and (max-width: 320px) {
+} */
+@media screen and (max-width: 365px) {
   .padin {
     font-size: 10px;
+  }
+  .home1 {
+    background-size: 18px;
+    border: 18px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+  }
+  .home2 {
+    background-size: 18px;
+    border: 18px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+  }
+  .home3 {
+    background-size: 18px;
+  }
+  .home4 {
+    background-size: 18px;
+    border: 18px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .padin {
+    font-size: 9px;
   }
   .home1 {
     background-size: 18px;

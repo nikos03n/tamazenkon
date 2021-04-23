@@ -4,7 +4,7 @@
       <div class="row">
         <v-hover v-slot="{ hover }" disabled>
           <v-card :elevation="hover ? 12 : 12" id="header"
-            ><v-card-text class="my-4 text-center title white--text ">
+            ><v-card-text class="my-4 text-center title white--text">
               Тамазенко Микола Васильович
             </v-card-text>
           </v-card></v-hover

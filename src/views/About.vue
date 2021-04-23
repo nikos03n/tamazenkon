@@ -18,7 +18,7 @@
               >
                 <v-card-text>
                   <div>
-                    <v-card-text class="title white--text">
+                    <v-card-text class="title blak--text">
                       <div class="home1"></div>
                       Тамазенко Микола Васильович <br />
                       (066)-725-62-51 nik.tam03@icloud.com
@@ -47,148 +47,273 @@
           <v-tab-item>
             <v-card flat elevation="8">
               <v-card-text>
-                <v-timeline>
-                  <v-timeline-item
-                    v-for="(year, i) in years"
-                    :key="i"
-                    :color="year.color"
-                    small
-                    id="1"
-                    class="text-centre py-4"
-                  >
-                    <template v-slot:opposite>
-                      <span
-                        :class="`headline font-weight-bold ${year.color}--text `"
-                        v-text="year.year"
-                      ></span>
-                    </template>
-                    <h2
-                      :class="`headline font-weight-medium mb-4 ${year.color}--text`"
+                <v-timeline
+                  ><v-alert elevation="14" class="hidden-sm-and-down">
+                    <v-timeline-item
+                      v-for="(year, i) in years"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      id="1"
+                      class="text-centre py-4"
                     >
-                      Виробництво
-                    </h2>
-                    <h4>
-                      Оператор автоматичних ліній (біометричні паспорти та і ін
-                      ) Поліграфкомбінат Україна.
-                    </h4>
-                    <vShowMoreDetailsCopy />
-                  </v-timeline-item>
-                  <v-timeline-item
-                    v-for="(year, i) in years1"
-                    :key="i"
-                    :color="year.color"
-                    small
-                    class="text-centre py-4"
-                  >
-                    <template v-slot:opposite>
-                      <span
-                        :class="`headline font-weight-bold ${year.color}--text`"
-                        v-text="year.year"
-                      ></span>
-                    </template>
-                    <h2
-                      :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text `"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-medium mb-4 ${year.color}--text`"
+                      >
+                        Виробництво
+                      </h2>
+                      <h4>
+                        Оператор автоматичних ліній (біометричні паспорти та і
+                        ін ) Поліграфкомбінат Україна.<vShowMoreDetailsCopy />
+                      </h4> </v-timeline-item
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-md-and-up">
+                    <v-card
+                      v-for="(year, i) in years"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      id="1"
+                      class="text-centre py-4"
                     >
-                      Торгівля
-                    </h2>
-                    <h4>
-                      Менеджер відділу збуту на заводі ПП "Промисловий альянс
-                      2012" (основна група товарів вироби з дроту, сітка зварена
-                      і ін.), Регіональний менеджер непродовольчих товарів
-                      (основна група товарів пластикові ємності, будівельні
-                      матеріали, фільтра під воду і ін.).
-                    </h4>
-                    <vShowMoreDetails />
-                  </v-timeline-item>
-                  <v-timeline-item
-                    v-for="(year, i) in years2"
-                    :key="i"
-                    :color="year.color"
-                    small
-                    class="text-centre py-4"
-                  >
-                    <template v-slot:opposite>
-                      <span
-                        :class="`headline font-weight-bold ${year.color}--text`"
-                        v-text="year.year"
-                      ></span>
-                    </template>
-                    <h2
-                      :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text `"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-medium mb-4 ${year.color}--text`"
+                      >
+                        Виробництво
+                      </h2>
+                      <h4>
+                        Оператор автоматичних ліній (біометричні паспорти та і
+                        ін ) Поліграфкомбінат Україна.<vShowMoreDetailsCopy />
+                      </h4> </v-card
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-sm-and-down">
+                    <v-timeline-item
+                      v-for="(year, i) in years1"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
                     >
-                      Державна служба
-                    </h2><h4>
-                    Cтарший державний податковий ревізор- інспектор відділу
-                    податкового контролю юридичних осіб (Державна податкова
-                    інспекція), фахівець (Управління сільського господарства
-                    облдержадміністрація), cпеціаліст по виплаті (Управління
-                    праці та соціального захисту населення) .</h4>
-                  </v-timeline-item>
-                  <v-timeline-item
-                    v-for="(year, i) in years3"
-                    :key="i"
-                    :color="year.color"
-                    small
-                    class="text-centre py-4"
-                  >
-                    <template v-slot:opposite>
-                      <span
-                        :class="`headline font-weight-bold ${year.color}--text`"
-                        v-text="year.year"
-                      ></span>
-                    </template>
-                    <h2
-                      :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Торгівля
+                      </h2>
+                      <h4>
+                        Менеджер відділу збуту на заводі ПП "Промисловий альянс
+                        2012" (основна група товарів вироби з дроту, сітка
+                        зварена і ін.), Регіональний менеджер непродовольчих
+                        товарів (основна група товарів пластикові ємності,
+                        будівельні матеріали, фільтра під воду і
+                        ін.).<vShowMoreDetails />
+                      </h4> </v-timeline-item
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-md-and-up">
+                    <v-card
+                      v-for="(year, i) in years1"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
                     >
-                      Сільське господарство
-                    </h2><h4>
-                    Виконував обов'язки бригадира в агородней бригаді.
-                    Вирощували помідори, огірки, цибуля та ін. овочі.</h4>
-                  </v-timeline-item>
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Торгівля
+                      </h2>
+                      <h4>
+                        Менеджер відділу збуту на заводі ПП "Промисловий альянс
+                        2012" (основна група товарів вироби з дроту, сітка
+                        зварена і ін.), Регіональний менеджер непродовольчих
+                        товарів (основна група товарів пластикові ємності,
+                        будівельні матеріали, фільтра під воду і
+                        ін.).<vShowMoreDetails />
+                      </h4> </v-card
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-sm-and-down">
+                    <v-timeline-item
+                      v-for="(year, i) in years2"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
+                    >
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Державна служба
+                      </h2>
+                      <h4>
+                        Cтарший державний податковий ревізор- інспектор відділу
+                        податкового контролю юридичних осіб (Державна податкова
+                        інспекція), фахівець (Управління сільського господарства
+                        облдержадміністрація), cпеціаліст по виплаті (Управління
+                        праці та соціального захисту населення). <vHoverOff />
+                      </h4> </v-timeline-item
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-md-and-up">
+                    <v-card
+                      v-for="(year, i) in years2"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
+                    >
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Державна служба
+                      </h2>
+                      <h4>
+                        Cтарший державний податковий ревізор- інспектор відділу
+                        податкового контролю юридичних осіб (Державна податкова
+                        інспекція), фахівець (Управління сільського господарства
+                        облдержадміністрація), cпеціаліст по виплаті (Управління
+                        праці та соціального захисту населення). <vHoverOff />
+                      </h4> </v-card
+                  ></v-alert>
+
+                  <v-alert elevation="14" class="hidden-sm-and-down">
+                    <v-timeline-item
+                      v-for="(year, i) in years3"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
+                    >
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Сільське господарство
+                      </h2>
+                      <h4>
+                        Виконував обов'язки бригадира в агородней бригаді.
+                        Вирощували помідори, огірки, цибуля та ін. овочі.
+                      </h4>
+                    </v-timeline-item></v-alert
+                  >
+
+                  <v-alert elevation="14" class="hidden-md-and-up">
+                    <v-card
+                      v-for="(year, i) in years3"
+                      :key="i"
+                      :color="year.color"
+                      small
+                      class="text-centre py-4"
+                    >
+                      <template v-slot:opposite>
+                        <span
+                          :class="`headline font-weight-bold ${year.color}--text`"
+                          v-text="year.year"
+                        ></span>
+                      </template>
+                      <h2
+                        :class="`headline font-weight-bold mb-4 ${year.color}--text`"
+                      >
+                        Сільське господарство
+                      </h2>
+                      <h4>
+                        Виконував обов'язки бригадира в агородней бригаді.
+                        Вирощували помідори, огірки, цибуля та ін. овочі.
+                      </h4>
+                    </v-card></v-alert
+                  >
                 </v-timeline>
               </v-card-text>
             </v-card>
           </v-tab-item>
+
           <v-tab-item>
             <v-card flat>
               <v-card-text>
-                <p>
-                  Тамазенко Микола Васильович (066)-725-62-51
-                  nik.tam03@icloud.com, Дата народженння 01.10.1981, м. київ
-                  пров. балтійський <br />Освіта вища (економіст-фінансист)
-                  Посвідчення водія категорії В (маю легкове авто)<br />
-                  Одружений, маю двоє дітей.
-                </p>
+                <v-alert elevation="14">
+                  <h4>
+                    Тамазенко Микола Васильович Дата народженння 01.10.1981,
+                    (066)-725-62-51 nik.tam03@icloud.com, м. київ пров.
+                    балтійський <br />Освіта вища (економіст-фінансист)
+                    Посвідчення водія категорії В (маю легкове авто)<br />
+                    Одружений, маю двоє дітей.
+                  </h4>
 
-                <p>
-                  Рівень навичок роботи з ПК: адміністратор. Сайто будова c нуля
-                  та (на системі Джумла), html, css, Vue.js, JavaScript, mysql,
-                  Bootstrap, Microsoft Word, Excel, 1С, Github.com та ін.
-                </p>
+                  <h4>
+                    Рівень навичок роботи з ПК: адміністратор. Сайто будова c
+                    нуля та (на системі Джумла), html, css, Vue.js, JavaScript,
+                    mysql, Bootstrap, Microsoft Word, Excel, 1С, Github.com та
+                    ін.
+                  </h4></v-alert
+                >
               </v-card-text>
             </v-card>
           </v-tab-item>
           <v-tab-item>
             <v-card flat>
               <v-card-text>
-                <p></p>
+                <v-alert elevation="14">
+                  <p></p>
 
-                <p class="mb-0">
-                  Володар якостей, таких як: <br />Чесність - говоримо правду і
-                  приймаємо її, довіряємо один одному. <br />Любов до справи -
-                  ми щасливі фанати справи, за яку взялися, отримуємо кайф.
-                  <br />Постійний розвиток - немає межі досконалості.
-                  Відповідальність і стабільність - це основа твого життя.
-                  Методичний аналітик - для тебе важлива мова цифр і грошей, у
-                  тебе добре виходить цифрувати результати роботи.
-                  nik.tam03@icloud.com 066-725-62-51
-                </p>
+                  <h4 class="mb-0">
+                    Володар якостей, таких як: <br />Чесність - говоримо правду
+                    і приймаємо її, довіряємо один одному. <br />Любов до справи
+                    - ми щасливі фанати справи, за яку взялися, отримуємо кайф.
+                    <br />Постійний розвиток - немає межі досконалості.
+                    Відповідальність і стабільність - це основа твого життя.
+                    <br />Методичний аналітик - для тебе важлива мова цифр і
+                    грошей, у тебе добре виходить цифрувати результати роботи.
+                    nik.tam03@icloud.com 066-725-62-51
+                  </h4>
+                </v-alert>
               </v-card-text>
             </v-card>
           </v-tab-item>
         </v-tabs>
       </v-card>
-      <vHoverOff />
     </div>
   </div>
 </template>
@@ -201,7 +326,7 @@ import CoreAppBar from "@/components/core/AppBar.vue";
 
 export default {
   name: "About",
-  components: { vShowMoreDetails, vShowMoreDetailsCopy, CoreAppBar },
+  components: { vShowMoreDetails, vShowMoreDetailsCopy, CoreAppBar, vHoverOff },
 
   props: {
     msg: String,
@@ -288,4 +413,12 @@ export default {
   padding-bottom: 250px;
   height: 200px;
 }
+/* .v-timeline .theme--light {
+  right: 200px;
+} */
+/* @media screen and (max-width: 500px) {
+  .v-timeline .theme--light {
+    right: 50px;
+  }
+} */
 </style>
