@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid" sty22le="height: 85px;">
+    <div class="container-fluid">
       <div class="row">
         <v-hover v-slot="{ hover }" disabled>
           <v-card :elevation="hover ? 12 : 12" id="header"
@@ -11,6 +11,28 @@
         >
       </div>
     </div>
+    <v-btn to="/About">
+      <v-snackbar
+        :timeout="-1"
+        :value="true"
+        absolute
+        bottom
+        color="success"
+        outlined
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <v-hover v-slot="{ hover }" disabled>
+              <v-card :elevation="hover ? 12 : 12" id="header"
+                ><v-card-text class="my-4 text-center title white--text">
+                  Тамазенко Микола Васильович
+                </v-card-text>
+              </v-card></v-hover
+            >
+          </div>
+        </div>
+      </v-snackbar></v-btn
+    >
   </div>
 </template>
 
@@ -37,4 +59,5 @@ export default {
   background-size: cover
   background: #0c1818f8
   //bottom: 20px
+  left: 4px
 </style>

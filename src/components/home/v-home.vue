@@ -5,23 +5,26 @@
         class="cover"
         style="background-image: url(path/to/user/image.jpg)"
       ></div> -->
-      <dir>
+      <v-flex mx-auto pa-3>
         <v-img
+          class="marg"
           style="
             display: block;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             overflow: hidden;
             margin-inline: auto;
+            margin: auto;
+            mx-auto
           "
           src="https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6"
           aspect-ratio="1.2"
         ></v-img>
-      </dir>
+      </v-flex>
 
-      <v-flex xs8 sm8 offset-sm0>
-        <v-hover >
+      <v-flex xs8 sm8 offset-sm0 mx-auto pa-3>
+        <v-hover>
           <template v-slot:default="{ hover }">
             <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-3">
               <v-card style="box-shadow: inherit">
@@ -67,11 +70,13 @@ export default {
 .qwer {
   background-color: #f5f5f5;
 }
-.rezwiethd{
+.rezwiethd {
   bottom: 50px;
 }
 
-
+.marg {
+  margin: auto;
+}
 
 /*Responsive*/
 

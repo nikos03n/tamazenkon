@@ -1,7 +1,7 @@
 <template>
   <v-list id="11w1020" class="d-flex align-end flex-column">
-    <ul >
-      <li >
+    <ul>
+      <li>
         <router-link to="/"><span1> </span1></router-link>
       </li>
     </ul>
@@ -32,6 +32,7 @@ li {
   margin-right: auto;
   margin-left: auto;
   max-width: 1020px;
+  margin-bottom: 20px;
 }
 
 #navbar a {
@@ -40,6 +41,7 @@ li {
   text-decoration: none;
   display: inline-block;
   padding-right: 40px;
+   margin-bottom: 20px;
 }
 
 .padin {
@@ -128,7 +130,7 @@ li {
     padding-top: 2px;
     padding-bottom: 10px;
   }
-} 
+}
 /* 320px - 576px */
 @media screen and (max-width: 375px) {
   .padin {

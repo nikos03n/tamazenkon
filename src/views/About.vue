@@ -3,12 +3,7 @@
     <CoreAppBar />
 
     <div>
-      <v-card
-        class="mx-auto home33"
-        max-width="1020"
-        tile
-        class0="v-timeline-item__inner-dot"
-      >
+      <v-card class="mx-auto" max-width="1020" tile>
         <v-hover>
           <template v-slot:default="{ hover }">
             <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
@@ -18,10 +13,13 @@
               >
                 <v-card-text>
                   <div>
-                    <v-card-text class="title blak--text">
+                    <v-card-text 
+                      style="margin-top: 60px; "
+                      class="title blak--text"
+                    >
                       <div class="home1"></div>
                       Тамазенко Микола Васильович <br />
-                      (066)-725-62-51 nik.tam03@icloud.com
+                      (066)-725-62-51
                     </v-card-text>
                   </div>
                 </v-card-text></v-img
@@ -92,7 +90,7 @@
                       <h2
                         :class="`headline font-weight-medium mb-4 ${year.color}--text`"
                       >
-                        Виробництво
+                        Виробництво з 2015
                       </h2>
                       <h4>
                         Оператор автоматичних ліній (біометричні паспорти та і
@@ -146,7 +144,7 @@
                       <h2
                         :class="`headline font-weight-bold mb-4 ${year.color}--text`"
                       >
-                        Торгівля
+                        Торгівля з 2011
                       </h2>
                       <h4>
                         Менеджер відділу збуту на заводі ПП "Промисловий альянс
@@ -203,7 +201,7 @@
                       <h2
                         :class="`headline font-weight-bold mb-4 ${year.color}--text`"
                       >
-                        Державна служба
+                        Державна служба з 2006
                       </h2>
                       <h4>
                         Cтарший державний податковий ревізор- інспектор відділу
@@ -257,7 +255,7 @@
                       <h2
                         :class="`headline font-weight-bold mb-4 ${year.color}--text`"
                       >
-                        Сільське господарство
+                        Сільське господарство з 1998
                       </h2>
                       <h4>
                         Виконував обов'язки бригадира в агородней бригаді.
@@ -275,10 +273,11 @@
               <v-card-text>
                 <v-alert elevation="14">
                   <h4>
-                    Тамазенко Микола Васильович Дата народженння 01.10.1981,
-                    (066)-725-62-51 nik.tam03@icloud.com, м. київ пров.
-                    балтійський <br />Освіта вища (економіст-фінансист)
-                    Посвідчення водія категорії В (маю легкове авто)<br />
+                    Тамазенко Микола Васильович народився у 01.10.1981, у
+                    с.Бугас обл.Донецька під м.Маріуполь у сімьї Греків
+                    Приазовья. (066)-725-62-51, nik.tam03@icloud.com м. Київ пров. Балтійський
+                    <br />Освіта вища (економіст-фінансист) Посвідчення водія
+                    категорії В (маю легкове авто)<br />
                     Одружений, маю двоє дітей.
                   </h4>
 
@@ -400,9 +399,9 @@ export default {
   background: url("https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/icon%2Fice_screenshot_20210421-092705.png?alt=media&token=c2047817-6f83-46a3-aa1a-ce4fd4ba8722")
     no-repeat;
 }
-.home33 {
+/* .home33 {
   background: #868686;
-}
+} */
 .home2 {
   color: #ffffff;
   text-align: center;

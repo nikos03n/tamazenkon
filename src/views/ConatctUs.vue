@@ -2,8 +2,6 @@
   <div>
     <CoreAppBar />
     <conatct />
-    <timeline />
-    <vFutor />
   </div>
 </template>
 
@@ -17,9 +15,7 @@ export default {
   name: "rezume",
   components: {
     conatct,
-    timeline,
     CoreAppBar,
-    vFutor,
   },
 };
 </script>
