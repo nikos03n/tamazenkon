@@ -6,9 +6,18 @@
         style="background-image: url(path/to/user/image.jpg)"
       ></div> -->
       <v-flex mx-auto pa-3>
-        <v-img
-          class="marg"
-          style="
+        <div class="text-center">
+          <v-badge
+            :value="hover"
+            color="deep-purple accent-4"
+            content="А вы как думаете?????"
+            right
+            transition="slide-x-transition"
+          >
+            <v-hover v-model="hover">
+              <v-img
+                class="marg"
+                style="
             display: block;
             width: 300px;
             height: 300px;
@@ -18,9 +27,12 @@
             margin: auto;
             mx-auto
           "
-          src="https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6"
-          aspect-ratio="1.2"
-        ></v-img>
+                src="https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6"
+                aspect-ratio="1.2"
+              ></v-img>
+            </v-hover>
+          </v-badge>
+        </div>
       </v-flex>
 
       <v-flex xs8 sm8 offset-sm0 mx-auto pa-3>
@@ -36,7 +48,6 @@
                     >
                       Резюме
                     </h3>
-
                     <div style="font-family: Segoe UI Italic">
                       {{ card_text }}
                     </div>
@@ -60,9 +71,10 @@ export default {
   components: {},
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   data: () => ({
+    hover: false,
     value: 1,
     card_text:
-      "Неважно, будет это всего одна страница или более развернутое портфолио, сайт-резюме – это более персонализированная возможность поделиться информацией и продемонстрировать свои технические навыки (сайт выполнен средствами vue.js). При этом использовать его могут представители всех профессий. Даже если у вас небольшой опыт, вы можете использовать сайт для эффектной демонстрации своих возможностей и качеств, чего просто невозможно сделать в обычном резюме.",
+      "Неважно, будет это всего одна страница или более развернутое портфолио, сайт-резюме – это более персонализированная возможность поделиться информацией и продемонстрировать свои технические навыки (сайт я выполнил средствами vue.js). При этом использовать его могут представители всех профессий. Даже если у вас небольшой опыт, вы можете использовать сайт для эффектной демонстрации своих возможностей и качеств, чего просто невозможно сделать в обычном резюме.",
   }),
 };
 </script>

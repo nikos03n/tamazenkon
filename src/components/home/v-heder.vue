@@ -55,7 +55,6 @@ export default {
   width: 100%
   height: 10%
   //background: url(https://cdn.pixabay.com/photo/2019/03/11/09/53/car-4048220_960_720.jpg)
-  center center no-repeat
   background-size: cover
   background: #0c1818f8
   //bottom: 20px
