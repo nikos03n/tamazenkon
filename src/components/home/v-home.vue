@@ -10,7 +10,7 @@
           <v-badge
             :value="hover"
             color="deep-purple accent-4"
-            content="А вы как думаете?????"
+            content="А вы как думаете ?????"
             right
             transition="slide-x-transition"
           >
@@ -22,19 +22,14 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            overflow: hidden;
-            margin-inline: auto;
-            margin: auto;
-            mx-auto
           "
-                src="https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2FImage-1.jpg?alt=media&token=c74b8004-b703-4a0a-991a-12312c163ed6"
+                src="@/components/home/feis.png"
                 aspect-ratio="1.2"
               ></v-img>
             </v-hover>
           </v-badge>
         </div>
       </v-flex>
-
       <v-flex xs8 sm8 offset-sm0 mx-auto pa-3>
         <v-hover>
           <template v-slot:default="{ hover }">

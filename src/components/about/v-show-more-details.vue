@@ -7,8 +7,7 @@
       :value="alert"
       color="#1976d2"
       dark
-      border="top"
-      icon="mdi-home"
+      border=""
       transition="scale-transition"
       elevation="20"
       >У процеси торгівлі я створював сайти на движку Joomla для збільшення

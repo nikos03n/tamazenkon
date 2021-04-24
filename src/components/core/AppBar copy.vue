@@ -41,7 +41,7 @@ li {
   text-decoration: none;
   display: inline-block;
   padding-right: 40px;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .padin {
@@ -247,5 +247,10 @@ li {
     padding-top: 2px;
     padding-bottom: 10px;
   }
+  /* .navbar a {
+    padding: 16px;
+
+    font-size: 100px;
+  } */
 }
 </style>
