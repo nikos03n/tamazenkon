@@ -1,10 +1,6 @@
 <template>
   <div>
     <v-layout perehid style="rezwiethd">
-      <!-- <div
-        class="cover"
-        style="background-image: url(path/to/user/image.jpg)"
-      ></div> -->
       <v-flex mx-auto pa-3>
         <div class="text-center">
           <v-badge
@@ -15,17 +11,18 @@
             transition="slide-x-transition"
           >
             <v-hover v-model="hover">
-              <v-img
-                class="marg"
-                style="
-            display: block;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-          "
-                src="@/components/home/feis.png"
-                aspect-ratio="1.2"
-              ></v-img>
+                <v-img
+                  class="marg"
+                  style="
+                    display: block;
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                  "
+                  src="@/components/home/feis.png"
+                  aspect-ratio="1.2"
+                ></v-img
+              >
             </v-hover>
           </v-badge>
         </div>
@@ -33,7 +30,7 @@
       <v-flex xs8 sm8 offset-sm0 mx-auto pa-3>
         <v-hover>
           <template v-slot:default="{ hover }">
-            <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-3">
+            <v-card to="/About" :elevation="hover ? 24 : 6" class="mx-auto pa-3">
               <v-card style="box-shadow: inherit">
                 <v-card-title primary-title style="text-align: left">
                   <div>

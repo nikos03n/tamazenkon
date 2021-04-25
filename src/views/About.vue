@@ -3,10 +3,10 @@
     <CoreAppBar />
 
     <div>
-      <v-card class="mx-auto" max-width="1020" tile>
+      <v-card    class="mx-auto" max-width="1020" tile>
         <v-hover>
           <template v-slot:default="{ hover }">
-            <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
+            <v-card to="/" :elevation="hover ? 24 : 6" class="mx-auto pa-6">
               <v-img
                 height="100%"
                 src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
