@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center mb-4">
-      <v-btn color="primary" @click="alert = !alert"> Детальніше </v-btn>
+      <v-btn color="primary" @click="alert = !alert"> Докладніше </v-btn>
     </div>
     <v-alert
       :value="alert"

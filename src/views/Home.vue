@@ -7,10 +7,10 @@
     <vHedr> </vHedr>
 
     <div class="mx-auto" max-width="1500" tile>
-              <div>
-          <vHome />
-          <SectionText />
-        </div>
+      <div>
+        <vHome />
+        <SectionText />
+      </div>
 
       <!-- <v-img
         class="fix"
@@ -34,6 +34,7 @@ export default {
   name: "Home",
   components: {
     CoreAppBar,
+
     vHedr,
     vHome,
     SectionText,
@@ -48,7 +49,7 @@ export default {
 }
 
 .fix {
-   /* background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  /* background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y; */
 }

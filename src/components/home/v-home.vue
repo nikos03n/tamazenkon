@@ -48,7 +48,7 @@
                 <v-card-actions style="float: right"> </v-card-actions>
 
                 <v-btn to="/About">
-                  <span>Детальніше</span>
+                  <span>Докладніше</span>
                 </v-btn>
               </v-card>
             </v-card>
