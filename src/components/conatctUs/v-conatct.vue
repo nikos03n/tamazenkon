@@ -4,7 +4,7 @@
       <v-hover>
         <template v-slot:default="{ hover }">
           <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6"
-            ><h2>Здесь перечень моих работ на vue.js</h2>
+            ><h2>Здесь перечень моих работ</h2>
           </v-card>
         </template>
       </v-hover>
@@ -56,7 +56,7 @@
                                 :href="item.href"
                                 :target="item.target"
                                 icon
-                              >
+                                >
                                 <v-icon
                                   :class="{ 'show-btns': hover }"
                                   :color="transparent"
@@ -189,6 +189,63 @@
                   </v-hover>
                 </v-col>
               </template>
+
+              <template v-for="(item, i) in items4">
+                <v-col :key="i" cols="12" md="4">
+                  <v-hover v-slot="{ hover }">
+                    <v-card
+                      :href="item.href"
+                      :target="item.target"
+                      :elevation="hover ? 12 : 2"
+                      :class="{ 'on-hover': hover }"
+                    >
+                      <v-img :src="item.img" height="225px">
+                        <v-card-title class="title white--text">
+                          <v-row
+                            class="fill-height flex-column"
+                            justify="space-between"
+                          >
+                            <p class="mt-4 subheading text-left color-text">
+                              {{ item.title }}
+                            </p>
+
+                            <div>
+                              <p
+                                class="ma-0 body-1 font-weight-bold font-italic text-left color-text"
+                              >
+                                {{ item.text }}
+                              </p>
+                              <p
+                                class="caption font-weight-medium font-italic text-left color-text"
+                              >
+                                {{ item.subtext }}
+                              </p>
+                            </div>
+
+                            <div class="align-self-center">
+                              <v-btn
+                                v-for="(icon, index) in icons4"
+                                :key="index"
+                                :class="{ 'show-btns': hover }"
+                                :color="transparent"
+                                icon
+                              >
+                                <v-icon
+                                  :class="{ 'show-btns': hover }"
+                                  :color="transparent"
+                                  class="caption font-weight-medium font-italic text-left color-text"
+                                >
+                                  {{ icon }}
+                                </v-icon>
+                              </v-btn>
+                            </div>
+                          </v-row>
+                        </v-card-title>
+                      </v-img>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+              </template>
             </v-row></v-card
           >
         </template>
@@ -239,6 +296,17 @@ export default {
         img:
           "https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2Ffotosaita-pita.png?alt=media&token=3d11a103-e638-46de-83b4-1d9c7dcd0418",
         href: "https://vuevlad.web.app/",
+        target: "_blank",
+      },
+    ],
+    items4: [
+      {
+        title: "",
+        text: "",
+        subtext: " ",
+        img:
+          "https://firebasestorage.googleapis.com/v0/b/my-sait-v.appspot.com/o/mai%20foto%2Fice_screenshot_20210529-081914.png?alt=media&token=3f82e365-68dd-4715-9b85-658ff04f757c",
+        href: "https://portfolio2.firebaseapp.com/#hotels",
         target: "_blank",
       },
     ],

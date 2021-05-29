@@ -106,7 +106,6 @@ export default {
         this.currentSlideIndex = 0;
       } else {
         this.currentSlideIndex++;
-        console.log(this.currentSlideIndex);
       }
     },
   },

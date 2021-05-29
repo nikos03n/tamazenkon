@@ -2,7 +2,7 @@
   <v-list  id="w1020" class="d-flex align-end flex-column">
     <ul >
       <li >
-        <router-link to="/"><span1> </span1></router-link>
+        <router-link to="/"></router-link>
       </li>
     </ul>
     <ul id="navbar" class="padin">
